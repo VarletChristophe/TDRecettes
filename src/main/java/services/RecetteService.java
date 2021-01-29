@@ -36,6 +36,10 @@ public class RecetteService {
 		return this.repository.findByNom(nom);
 	}
 	
+	public List<Recette> findByCategorie(@PathVariable String nom) {
+		return this.repository.findByCategorie(nom);
+	}
+	
 	
 	public Recette create(@RequestBody Recette recette) {
 		return this.repository.insert(recette);
